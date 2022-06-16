@@ -1,7 +1,7 @@
 baseURL = 'https://stefanopulze.com/'
 languageCode = 'it-IT'
 title = 'Stefano Pulze'
-theme = 'me22'
+theme = 'me-22'
 defaultContentLanguage = 'it'
 googleAnalytics = 'G-GZEH8CJ8G0'
 
