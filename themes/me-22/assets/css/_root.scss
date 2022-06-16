@@ -15,7 +15,15 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #000;
+        --background: #0f0e17;
+        --headline: #fffffe;
+        --paragraph: #a7a9be;
+        --button: #6246ea;
+        --button-text: #fffffe;
+        --stroke: black;
+        --secondary: black;
+        --tertiarty: #e45858;
+
         --color-contrast: #fff;
         --color-contrast-1: #2b2b2b;
         --color-contrast-2: #666;
