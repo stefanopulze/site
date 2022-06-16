@@ -1,0 +1,20 @@
+<header class="header">
+    <div>
+        {{ if not .IsHome }}
+        <a href="/" class="nav-link">{{ .Site.Title }}</a>
+        {{ end }}
+    </div>
+
+    <div>
+        {{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL | absLangURL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+        {{ end }}
+
+        {{ range .Site.Home.AllTranslations }}
+        <a class="nav-link is-language" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+    </div>
+</header>

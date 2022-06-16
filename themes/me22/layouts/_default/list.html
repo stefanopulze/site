@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<div class="container">
+    <p class="post-tips">Some tips</p>
+</div>
+
+<div class="container posts">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <a class="post" href="{{ .RelPermalink }}">
+        <h2 class="post-title">{{ .Title }}</h2>
+        <div class="post-summary">{{ .Summary }}</div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

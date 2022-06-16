@@ -1,0 +1,10 @@
+baseURL = 'https://stefanopulze.com/'
+languageCode = 'it-IT'
+title = 'Stefano Pulze'
+theme = 'me22'
+defaultContentLanguage = 'it'
+googleAnalytics = 'G-GZEH8CJ8G0'
+
+[markup]
+    [markup.highlight]
+        style = 'monokai'

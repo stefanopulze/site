@@ -1,0 +1,19 @@
+.footer {
+    font-size: .9em;
+    text-align: center;
+    padding-bottom: 3em;
+
+    a {
+        text-decoration: none;
+        margin: 0 10px;
+
+        &:hover svg {
+            fill: var(--color-contrast);
+        }
+    }
+
+    svg {
+        width: 24px;
+        fill: var(--color-contrast-2);
+    }
+}

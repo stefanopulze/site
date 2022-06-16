@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="container">
+    <div class="avatar circle">
+        <img src="/images/me-yellow.webp" alt="{{ .Site.Title }}">
+    </div>
+</section>
+
+<section class="container">
+    <div class="hero">
+        <h1 class="hero-title">{{ .Params.hero }}</h1>
+        <div class="hero-subtitle">{{ .Content }}</div>
+    </div>
+</section>
+{{ end }}

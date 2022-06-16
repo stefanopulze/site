@@ -1,0 +1,59 @@
+.post-tips {
+  color: var(--color-contrast-2);
+  font-size: .9rem;
+  padding: 0 2rem;
+  text-transform: uppercase;
+}
+
+.posts {
+  .post {
+    padding: 2rem;
+    display: block;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: var(--secondary);
+    }
+
+    .post-title {
+      margin-bottom: .9rem;
+    }
+  }
+}
+
+.post {
+  text-decoration: none;
+  display: inline-block;
+
+  .post-title {
+    margin: 0;
+  }
+}
+
+.post-metadata {
+  font-size: .9rem;
+  display: flex;
+  gap: 60px;
+  margin-bottom: 3rem;
+
+  p {
+    margin: .5em 0 0 0;
+    font-size: inherit;
+  }
+}
+
+.highlight {
+  pre {
+    padding: 10px;
+  }
+}
+
+.post-content,
+.post-content p {
+  font-size: 1rem;
+}
+
+h1.post-title {
+  font-size: 3em;
+  margin-bottom: 1rem;
+}

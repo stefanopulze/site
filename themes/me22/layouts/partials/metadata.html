@@ -1,0 +1,14 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "02. Jan, 2006" }}
+
+<div class="post-metadata">
+    <div>
+        <b>Autore</b>
+        <p>{{ .Param "author" }}</p>
+    </div>
+
+    <div>
+        <b>Date</b>
+        <p><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></p>
+    </div>
+</div>
