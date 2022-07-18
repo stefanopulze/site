@@ -9,7 +9,7 @@
     <meta name="keywords" content="{{ .Site.Params.meta.keywords }}">
     <meta name="author" content="{{ .Site.Params.meta.author }}">
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.stefanopulze.com/">
     <meta property="og:image" content="https://www.stefanopulze.com/images/me.png">
     <meta property="og:description" content="{{ .Site.Params.meta.description }}">
@@ -22,4 +22,9 @@
 
     {{ $style := resources.Get "css/main.scss" | toCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ if hugo.IsProduction }}
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.2/dist/cookieconsent.css">
+    {{ end }}
 </head>

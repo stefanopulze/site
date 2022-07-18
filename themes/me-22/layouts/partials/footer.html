@@ -12,21 +12,18 @@
     </div>
 </footer>
 
-<script>
-    const styles = [
-        'font-size: 24px',
-        'font-family: monospace',
-        'background: white',
-        'display: inline-block',
-        'color: black',
-        'padding: 8px 19px',
-        'border: 1px dashed',
-    ].join(';')
+{{ $consoleJS := resources.Get "js/console.js" | js.Build }}
+<script defer src="{{$consoleJS.Permalink}}"></script>
 
-    console.log('%c Hi dude! 👋', styles);
-    console.log('%c I\'m available for new jobs', 'font-size: 14px')
-</script>
 
 {{ if hugo.IsProduction }}
-{{ template "_internal/google_analytics.html" . }}
+{{ partial "consent.html" . }}
+
+<script data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id={{.Site.GoogleAnalytics}}"></script>
+<script data-cookiecategory="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{.Site.GoogleAnalytics}}', { 'anonymize_ip': true});
+</script>
 {{ end }}
